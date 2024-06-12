@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vizualizacija</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <div id="left">
+            <h1>EUROPE STATISTICS</h1>
+            <nav>
+                <ul>
+                    <li><button class="active" onclick="updateMap('Population', this)">Population</button></li>
+                    <li><button onclick="updateMap('Life Expectancy', this)">Life Expectancy</button></li>
+                    <li><button onclick="updateMap('CO2 emissions per capita (t)', this)">CO2 Emissions</button></li>
+                    <li><button onclick="updateMap('Health expenditure (% of GDP)', this)">Health Expenditures</button></li>
+                    <li><button onclick="updateMap('Electric power consumption per capita (kWh)', this)">Electric Power Consumption</button></li>
+                    <li><button onclick="updateMap('GDP per capita, PPP (current international $)', this)">GDP</button></li>
+                    <li><button onclick="updateMap('Individuals using the Internet (%)', this)">Internet Usage</button></li>
+                    <li><button onclick="updateMap('Obesity among adults (%)', this)">Obesity</button></li>
+                    <li><button onclick="updateMap('Beer consumption per capita (l)', this)">Beer Consumption</button></li>
+                </ul>
+            </nav>
+            <div id="yearSliderContainer">
+                <label for="yearSlider">Year: <span id="yearLabel">2000</span></label>
+                <input type="range" id="yearSlider" min="2000" max="2020" step="1" value="2000" oninput="updateYear(this.value)">
+            </div>
+        </div>
+        <div id="map">
+            <div id="tooltip" class="hidden"></div>
+        </div>
+        <div id="legend"></div>
+    </div>
+    
+    <div id="selectedCountryContainer"></div>
+
+    <div id="graphs">
+        <div id="firstGraph"></div>
+        <div id="secondGraph"></div>
+    </div>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

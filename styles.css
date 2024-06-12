@@ -1,0 +1,147 @@
+* {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: grid;
+    overflow-y: scroll;
+}
+
+.content {
+    grid-row: 1;
+    display: flex;
+}
+
+#left h1 {
+    margin: 30px auto;
+    color: #6ebaba;
+}
+
+nav {
+    width: 80%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 2%;
+}
+
+nav ul li button {
+    font-size: medium;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav ul li button.active {
+    background-color: #6ebaba;
+    color: white;
+}
+
+nav ul li button:hover {
+    background-color: #90e5e5;
+}
+
+nav ul li button:active {
+    background-color: #6ebaba;
+}
+
+#left {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#yearSliderContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#yearSlider {
+    margin-left: 10px;
+    width: 200px;
+}
+
+#tooltip {
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid black;
+    pointer-events: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+
+#map {
+    width: 50%;
+}
+
+svg {
+    background-color: #add7d7;
+}
+
+.legend-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.legend-item div:first-child {
+    width: 30px;
+    height: 30px;
+}
+
+.legend-item div:last-child {
+    padding-left: 10px;
+}
+
+#legend {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+#selectedCountryContainer h2 {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    margin: 50px auto 0 auto;
+}
+
+#graphs {
+    width: 100%;
+    display: flex;
+}
+
+#firstGraph, #secondGraph {
+    display: flex;
+    flex-direction: column;
+}
+
+#valueThroughYearsGraph {
+    grid-column: 2;
+}
